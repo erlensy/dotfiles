@@ -10,6 +10,5 @@ alias c='g++ -std=c++2a'
 alias o='./a.out'
 alias mv="mv -i"
 alias gb="git add . && git commit -m "m" && git push"
-alias cal="ncal -bMw"
 
 bindkey -v

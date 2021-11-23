@@ -22,12 +22,18 @@ set splitbelow splitright
 " remap leader key
 let mapleader = ','
 
-" remap compile and build keys
+" check filetype
 filetype plugin indent on
+
+" tex, python and julia compile key remap
 autocmd FileType tex noremap <leader><space> :w <CR> :! pdflatex -shell-escape %<CR> : ! open $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
 autocmd FileType python noremap <leader><space> :w <CR> :term python3 %<CR>
-autocmd FileType cpp noremap <leader><space> :silent make\|redraw!\|cc<CR>
-autocmd FileType cpp noremap <leader>o :w <CR> :term ./a.out<CR>
+autocmd FileType julia noremap <leader><space> :w <CR> :term julia %<CR>
+
+" cpp compile key remaps
+autocmd FileType cpp noremap <leader><space> :w <CR> :silent make\|redraw!\|cc<CR>
+autocmd FileType cpp noremap <leader>ci :w <CR> :terminal ./a.out<CR>
+autocmd FileType cpp noremap <leader>co :w <CR> :tab terminal ./a.out<CR>
 autocmd FileType cpp noremap <leader>cf :cn<CR>
 autocmd FileType cpp noremap <leader>cd :cp<CR>
 autocmd FileType cpp noremap <leader>cw :cw<CR>

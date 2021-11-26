@@ -18,8 +18,8 @@ alias mv="mv -i"
 alias gb="git add . && git commit -m "m" && git push" # :O
 
 # history path and history size
-HISTSIZE = 1000
-SAVEHIST = 1000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 
 # autocomplete settings

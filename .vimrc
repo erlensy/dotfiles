@@ -26,7 +26,9 @@ let mapleader = ','
 filetype plugin indent on
 
 " tex, python and julia compile key remap
-autocmd FileType tex noremap <leader><space> :w <CR> :! pdflatex -shell-escape %<CR> : ! open $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
+autocmd FileType tex noremap <leader><space> :w <CR> :! pdflatex -shell-escape %<CR> :! open $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
+autocmd FileType markdown noremap <leader><space> :w <CR> :! pandoc -s % -o out.pdf<CR> :! open out.pdf <CR><CR>
+
 autocmd FileType python noremap <leader><space> :w <CR> :term python3 %<CR>
 autocmd FileType julia noremap <leader><space> :w <CR> :term julia %<CR>
 
@@ -45,6 +47,7 @@ Plug 'jacoborus/tender.vim' " colorscheme
 Plug 'JuliaEditorSupport/julia-vim' " extra julia support (ex : \theta)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " install fuzzyfinder
 Plug 'junegunn/fzf.vim' " fuzzyfinder
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " using external colorscheme

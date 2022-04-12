@@ -1,5 +1,5 @@
 # set path
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/Applications/Julia-1.5.app/Contents/Resources/julia/bin:/Applications/CMake.app/Contents/bin:/usr/local/texlive/2021/bin/universal-darwin/:/Users/erlendsyljuasen/miniconda3/bin/conda:/Users/erlendsyljuasen/miniconda3/bin:/usr/local/Homebrew/bin:/usr/local/opt/llvm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/Applications/Julia-1.5.app/Contents/Resources/julia/bin:/Applications/CMake.app/Contents/bin:/usr/local/texlive/2021/bin/universal-darwin/:/Users/erlendsyljuasen/miniconda3/bin/conda:/Users/erlendsyljuasen/miniconda3/bin:/usr/local/Homebrew/bin:/usr/local/opt/llvm/bin:/usr/sbin:$PATH
 
 # use vim mode
 bindkey -v

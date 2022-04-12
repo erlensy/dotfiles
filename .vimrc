@@ -53,5 +53,8 @@ call plug#end()
 " using external colorscheme
 colorscheme tender
 
+" blue scheme
+"colorscheme koehler
+
 " syntax highlighting
 syntax on

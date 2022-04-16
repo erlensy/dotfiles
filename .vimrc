@@ -45,8 +45,6 @@ autocmd FileType cpp noremap <leader>cc :cc<CR>
 call plug#begin('~/.vim/plugged')
 Plug 'jacoborus/tender.vim' " colorscheme
 Plug 'JuliaEditorSupport/julia-vim' " extra julia support (ex : \theta)
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " install fuzzyfinder
-Plug 'junegunn/fzf.vim' " fuzzyfinder
 Plug 'plasticboy/vim-markdown'
 call plug#end()
 

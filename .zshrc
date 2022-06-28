@@ -16,6 +16,8 @@ alias c='g++ -std=c++2a'
 alias o='./a.out'
 alias mv="mv -i"
 alias gb="git add . && git commit -m "m" && git push" # :O
+alias xrd="source ~/progg/envs/xrd/bin/activate"
+alias oqc="source ~/progg/envs/oqc/bin/activate"
 
 # history path and history size
 HISTSIZE=1000

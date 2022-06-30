@@ -18,6 +18,7 @@ alias mv="mv -i"
 alias gb="git add . && git commit -m "m" && git push" # :O
 alias xrd="source ~/progg/envs/xrd/bin/activate"
 alias oqc="source ~/progg/envs/oqc/bin/activate"
+alias saga="ssh erlensy@saga.sigma2.no"
 
 # history path and history size
 HISTSIZE=1000

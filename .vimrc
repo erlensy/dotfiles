@@ -21,16 +21,18 @@ set splitbelow splitright
 
 " remap leader key
 let mapleader = ','
+let maplocalleader = ","
 
 " check filetype
 filetype plugin indent on
 
-" tex, python and julia compile key remap
-autocmd FileType tex noremap <leader><space> :w <CR> :! pdflatex -shell-escape %<CR> :! open $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
-autocmd FileType markdown noremap <leader><space> :w <CR> :! pandoc -s % -o out.pdf<CR> :! open out.pdf <CR><CR>
-
+" python, markdown and julia compile key remap
 autocmd FileType python noremap <leader><space> :w <CR> :term python3 %<CR>
+autocmd FileType markdown noremap <leader><space> :w <CR> :! pandoc -s % -o out.pdf<CR> :! open out.pdf <CR><CR>
 autocmd FileType julia noremap <leader><space> :w <CR> :term julia %<CR>
+
+" autowrite when entering normal mode 
+autocmd InsertLeave *.tex update
 
 " cpp compile key remaps
 autocmd FileType cpp noremap <leader><space> :w <CR> :silent make\|redraw!\|cc<CR>
@@ -43,13 +45,17 @@ autocmd FileType cpp noremap <leader>cc :cc<CR>
 
 " external plugins
 call plug#begin('~/.vim/plugged')
-Plug 'jacoborus/tender.vim' " colorscheme
-Plug 'JuliaEditorSupport/julia-vim' " extra julia support (ex : \theta)
+Plug 'jacoborus/tender.vim'
+Plug 'JuliaEditorSupport/julia-vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'lervag/vimtex'
 call plug#end()
 
 " using external colorscheme
 colorscheme tender
+
+" skim pdf viewer for vimtex
+let g:vimtex_view_method = 'skim'
 
 " blue scheme
 "colorscheme koehler

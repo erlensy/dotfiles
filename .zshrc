@@ -29,6 +29,3 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 comp_options+=(globdots)
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"

@@ -17,6 +17,7 @@ alias o='./a.out'
 alias mv="mv -i"
 alias gb="git add . && git commit -m "m" && git push" # :O
 alias saga="ssh erlensy@saga.sigma2.no"
+alias scq="source ~/progg/envs/scq/bin/activate"
 
 # history path and history size
 HISTSIZE=1000

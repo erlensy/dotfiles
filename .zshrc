@@ -5,7 +5,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/Applications/Julia-1.5
 bindkey -v
 
 # style prompt
-PROMPT='%F{208}%1d%f > '
+# PROMPT='%F{208}%1d%f > '
+PROMPT='%F{178}%1d%f > '
 force_color_prompt=yes
 
 # aliases

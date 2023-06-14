@@ -20,8 +20,8 @@ set incsearch
 set splitbelow splitright
 
 " remap leader key
-let mapleader = ','
-let maplocalleader = ","
+let mapleader=','
+let maplocalleader=","
 
 " check filetype
 filetype plugin indent on
@@ -52,13 +52,13 @@ Plug 'lervag/vimtex'
 call plug#end()
 
 " using external colorscheme
-colorscheme tender
-
-" skim pdf viewer for vimtex
-let g:vimtex_view_method = 'skim'
+" colorscheme tender
 
 " blue scheme
-"colorscheme koehler
+colorscheme koehler
+
+" skim pdf viewer for vimtex
+let g:vimtex_view_method='skim'
 
 " syntax highlighting
 syntax on

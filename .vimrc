@@ -27,7 +27,7 @@ let maplocalleader=","
 filetype plugin indent on
 
 " python, markdown and julia compile key remap
-autocmd FileType python noremap <leader><space> :w <CR> :term python3 %<CR>
+autocmd FileType python noremap <leader><space> :w <CR> :term python3.11 %<CR>
 autocmd FileType markdown noremap <leader><space> :w <CR> :! pandoc -s % -o out.pdf<CR> :! open out.pdf <CR><CR>
 autocmd FileType julia noremap <leader><space> :w <CR> :term julia %<CR>
 
@@ -46,16 +46,21 @@ autocmd FileType cpp noremap <leader>cc :cc<CR>
 " external plugins
 call plug#begin('~/.vim/plugged')
 Plug 'jacoborus/tender.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tribela/vim-transparent'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'lervag/vimtex'
 call plug#end()
 
+let g:python_highlight_all = 1
+
 " using external colorscheme
 " colorscheme tender
 
-" blue scheme
-colorscheme koehler
+" colorscheme blue terminal
+set background=dark
+colorscheme Papercolor
 
 " skim pdf viewer for vimtex
 let g:vimtex_view_method='skim'

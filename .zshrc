@@ -10,13 +10,14 @@ bindkey '^e' edit-command-line
 # PROMPT='%F{208}%1d%f > '
 PROMPT='%B%F{012}%1d%f%b > '
 force_color_prompt=yes
-export LS_COLORS="di=00;91":"st=00;91":"tw=00;91":"ow=00;91":"*.py=00;93":"*.ipynb=00;93":"*.cpp=00;93":"*.jl=00;93":"*.txt=00;94":"*.pdf=00;95":"*.jpg=00;94":"*.md=00;94":"*.mp3=00;94"
+export LS_COLORS="di=00;91":"st=00;91":"tw=00;91":"ow=00;91":"*.py=00;93":"*.ipynb=00;93":"*.cpp=00;93":"*.h=00;93":"*.jl=00;93":"*.txt=00;00":"*.pdf=00;00":"*.jpg=00;00":"*.md=00;00":"*.mp3=00;00"
 
 # aliases
 alias ls='gls -h -X --group-directories-first --quoting-style=literal --color'
 alias ll='gls -1 -X --group-directories-first --quoting-style=literal --color'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias p='python3'
+alias p='python3.11-intel64'
+alias python3='python3.11-intel64'
 alias j='julia'
 alias c='g++ -std=c++2a'
 alias o='./a.out'
